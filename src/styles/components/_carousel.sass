@@ -1,0 +1,61 @@
+$item-width: 45%
+$distance: 200px
+
+.carousel
+  align-items: center
+  display: flex
+  flex-direction: column
+  margin-top: 0
+  overflow: hidden
+  padding: 1rem
+  perspective: $distance
+
+  & > *
+    flex-shrink: 0
+
+  &__items
+    margin-bottom: 1rem
+    transform-style: preserve-3d
+    transition: transform .5s ease-in-out
+    width: $item-width
+
+  &__controls
+    display: flex
+    justify-content: space-between
+    margin: 0 1rem
+
+img
+  backface-visibility: hidden
+  padding: .625rem
+  width: 100%
+
+  &:not(:first-of-type)
+    left: 0
+    position: absolute
+    top: 0
+
+[data-backface] img
+  backface-visibility: visible
+
+.btn
+  background-color: transparent
+  border: 1px solid currentColor
+  border-radius: 2px
+  color: inherit
+  cursor: pointer
+  flex-shrink: 0
+  font-family: inherit
+  font-size: .75rem
+  font-weight: inherit
+  letter-spacing: 1px
+  margin: 0 .25rem
+  padding: .25rem 1rem
+  position: relative
+
+  &--prev::before
+    content: '⇽'
+    margin-right: .5rem
+
+  &--next::after
+    content: '⇾'
+    margin-left: .5rem
