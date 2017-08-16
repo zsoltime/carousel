@@ -1,6 +1,6 @@
 # Simple Carousel
 
-![Carousel](preview.jpg?raw=true)
+![Carousel](preview.gif?raw=true)
 
 ## Usage
 
